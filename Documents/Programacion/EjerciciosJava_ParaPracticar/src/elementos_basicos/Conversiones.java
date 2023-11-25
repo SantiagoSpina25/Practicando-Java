@@ -35,6 +35,14 @@ public class Conversiones {
          System.out.println("Suma de 1+1: " + (1 + numeroInt));
         
         // Lo mismo con otros valores como por ej Double
+        
+        // Tambien al reves, de un numero a un String
+        
+        int numero2 = 5;
+        
+        String numeroAString = String.valueOf(numero2);
+        System.out.println("Mi numero es: " + numero2);
+        
     }
     
 }
