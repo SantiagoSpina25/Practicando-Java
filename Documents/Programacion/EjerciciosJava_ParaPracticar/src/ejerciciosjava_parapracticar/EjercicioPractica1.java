@@ -11,7 +11,7 @@ public class EjercicioPractica1 {
         
         /* Enunciado
          Crear un array de 10 numeros, que los numeros los introduzca por teclado y se almacenen automaticamente en el array
-        y crear dos funciones 1. Ver array entero, 2. Suma total de los numeros y 3. Cuales y cuantos numeros son mayores a 10
+        y crear dos funciones 1. Ver array entero, 2. Suma total de los numeros, 3. Cuales y cuantos numeros son mayores a diez, 4. cual es el mayor,5 cual es el menor y 6. salir
         */
         
         // Creamos un objeto Scanner para pedir numeros por teclado
@@ -32,7 +32,7 @@ public class EjercicioPractica1 {
             
             System.out.println("¿Que desea realizar con el array?");
             
-            System.out.println("1. Mostrar array, 2. Sumar todos los numeros, 3. Ver cuales y cuantos numeros son mayores a 10");
+            System.out.println("1. Mostrar array, 2. Sumar todos los numeros, 3. Ver cuales y cuantos numeros son mayores a diez, 4. Mostrar el numero mas alto, 5. Mostrar el numero mas bajo y 5. salir");
             opcion = sc.nextInt();
             
             
@@ -46,12 +46,18 @@ public class EjercicioPractica1 {
                 case 3://Cuales y cuantos numeros son >10
                     mostrarNumerosMayoresADiez(arrayNumeros);
                     break;
-                default:
+                case 4://Cual es el mayor
+                    System.out.println("Mayor numero: " + mostrarMayor(arrayNumeros));
+                    break;
+                case 5: // Cual es el menor
+                    System.out.println("Menor numero: " + mostrarMenor(arrayNumeros));
+                    break;
+                default://Salir
                     System.out.println("saliendo...");
-                    opcion = 4;
+                    opcion = 6;
             }
             
-        } while (opcion != 4);
+        } while (opcion != 6);
     }
     
     
@@ -92,6 +98,40 @@ public class EjercicioPractica1 {
             }
         }
         System.out.println("Cantidad de numeros mayores a diez: " + contador);
+    }
+
+    public static int mostrarMayor(int[] arrayNumeros) {
+        // Ordenamos de menor a mayor con Arrays.sort
+        // Arrays.sort(arrayNumeros);
+        
+        // O lo hacemos mediante un bucle for
+        int mayor = arrayNumeros[0];
+        for (int i = 0; i < arrayNumeros.length; i++) {
+            if(arrayNumeros[i]>mayor){
+                mayor = arrayNumeros[i];
+            }
+            
+        }
+        
+        // return arrayNumeros[arrayNumeros.length - 1];
+          return mayor;
+    }
+
+    public static int mostrarMenor(int[] arrayNumeros) {
+        // Ordenamos de menor a mayor con Arrays.sort
+        // Arrays.sort(arrayNumeros);
+        
+        // O lo hacemos mediante un bucle for
+        int menor = arrayNumeros[0];
+        for (int i = 0; i < arrayNumeros.length; i++) {
+            if(arrayNumeros[i]<menor){
+                menor = arrayNumeros[i];
+            }
+            
+        }
+        
+        // return arrayNumeros[0];
+          return menor;
     }
     
 }
