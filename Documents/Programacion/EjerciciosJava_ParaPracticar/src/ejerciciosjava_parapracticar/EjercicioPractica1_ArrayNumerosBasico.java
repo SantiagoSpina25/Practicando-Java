@@ -5,13 +5,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class EjercicioPractica1 {
+public class EjercicioPractica1_ArrayNumerosBasico {
     
     public static void main(String []args) {
         
         /* Enunciado
          Crear un array de 10 numeros, que los numeros los introduzca por teclado y se almacenen automaticamente en el array
-        y crear dos funciones 1. Ver array entero, 2. Suma total de los numeros, 3. Cuales y cuantos numeros son mayores a diez, 4. cual es el mayor,5 cual es el menor y 6. salir
+        y crear dos funciones 1. Ver array entero, 2. Suma total de los numeros, 3. Cuales y cuantos numeros son mayores a diez, 
+        4. cual es el mayor,5 cual es el menor y 6. salir
         */
         
         // Creamos un objeto Scanner para pedir numeros por teclado
