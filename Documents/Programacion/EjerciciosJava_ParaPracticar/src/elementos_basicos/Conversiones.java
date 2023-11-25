@@ -24,7 +24,7 @@ public class Conversiones {
         
         
         
-                // --------------------------------------------------Parseos--------------------------------------------------
+        // --------------------------------------------------Parseos--------------------------------------------------
         
          // Mediante los parseos podemos convertir un tipo de valor a otro, por ejemplo, un String a un numero:
          
