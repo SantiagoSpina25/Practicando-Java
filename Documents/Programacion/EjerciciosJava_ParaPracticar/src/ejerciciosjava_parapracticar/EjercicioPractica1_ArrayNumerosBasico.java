@@ -11,7 +11,7 @@ public class EjercicioPractica1_ArrayNumerosBasico {
         
         /* Enunciado
          Crear un array de 10 numeros, que los numeros los introduzca por teclado y se almacenen automaticamente en el array
-        y crear dos funciones 1. Ver array entero, 2. Suma total de los numeros, 3. Cuales y cuantos numeros son mayores a diez, 
+        y crear las siguientes funciones: 1. Ver array entero, 2. Suma total de los numeros, 3. Cuales y cuantos numeros son mayores a diez, 
         4. cual es el mayor,5 cual es el menor y 6. salir
         */
         
@@ -33,7 +33,7 @@ public class EjercicioPractica1_ArrayNumerosBasico {
             
             System.out.println("¿Que desea realizar con el array?");
             
-            System.out.println("1. Mostrar array, 2. Sumar todos los numeros, 3. Ver cuales y cuantos numeros son mayores a diez, 4. Mostrar el numero mas alto, 5. Mostrar el numero mas bajo y 5. salir");
+            System.out.println("1. Mostrar array, 2. Sumar todos los numeros, 3. Ver cuales y cuantos numeros son mayores a diez, 4. Mostrar el numero mas alto, 5. Mostrar el numero mas bajo y 6. salir");
             opcion = sc.nextInt();
             
             
@@ -69,19 +69,20 @@ public class EjercicioPractica1_ArrayNumerosBasico {
         
         // Forma con for
         
-        // for (int i = 0; i < arrayNumeros.length; i++) {
-        //     System.out.print("{ " + arrayNumeros[i] + " }, ");
-        //  }
+//         for (int i = 0; i < arrayNumeros.length; i++) {
+//             System.out.print("{ " + arrayNumeros[i] + " }, ");
+//          }
+//         System.out.println("");
     }
 
     public static int sumarNumeros(int[] arrayNumeros) {
         int suma = 0;
         // Recorremos el array y vamos acumulando la suma
         for (int i = 0; i < arrayNumeros.length; i++) {
-            suma += arrayNumeros[i];
+//            suma += arrayNumeros[i];
             
             // Es lo mismo que esto
-            // suma = suma + arrayNumeros[i]
+             suma = suma + arrayNumeros[i];
         }
         return suma;
     }
@@ -107,6 +108,7 @@ public class EjercicioPractica1_ArrayNumerosBasico {
         
         // O lo hacemos mediante un bucle for
         int mayor = arrayNumeros[0];
+        
         for (int i = 0; i < arrayNumeros.length; i++) {
             if(arrayNumeros[i]>mayor){
                 mayor = arrayNumeros[i];

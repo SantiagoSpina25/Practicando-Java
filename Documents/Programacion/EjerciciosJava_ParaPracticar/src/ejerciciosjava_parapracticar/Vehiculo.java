@@ -51,7 +51,7 @@ public class Vehiculo {
     // toString
     @Override
     public String toString() {
-        return "Vehiculo{" + "marca=" + marca + ", modelo=" + modelo + ", precio=" + precio + '}';
+        return "Coche: {" + "marca=" + marca + ", modelo=" + modelo + ", precio=" + precio + '}';
     }
     
     

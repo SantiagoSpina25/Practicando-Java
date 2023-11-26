@@ -19,13 +19,16 @@ public class EjercicioPractica3_EncontrarVehiculoMasBarato {
         
         System.out.println("Bienvenido!");
         System.out.println("Cuantos vehiculos va a ingresar? ");
-        Vehiculo [] arrayVehiculos = new Vehiculo[sc.nextInt()];
+        
+        int cuantosVehiculos = sc.nextInt();
+        Vehiculo [] arrayVehiculos = new Vehiculo[cuantosVehiculos];
         
         do {            
             System.out.println("Que desea realizar?");
             System.out.println("1.Ingresar vehiculo");
             System.out.println("2.Vehiculo mas barato");
             System.out.println("3.Mostrar Vehiculos");
+            System.out.println("5. Eliminar Vehiculos");
             System.out.println("4.Salir");
             opcion = sc.nextInt();
             
@@ -41,15 +44,22 @@ public class EjercicioPractica3_EncontrarVehiculoMasBarato {
                     break;
                 case 4:
                     System.out.println("Saliendo...");
-                    opcion = 5;
+                    opcion = 6;
+                    break;
+                case 5: 
+                    
+                    System.out.println("Que modelo quiere eliminar?");
+                    String modeloAEliminar = sc.next();
+                    
+                    eliminarVehiculoPorModelo(modeloAEliminar, arrayVehiculos);
                     break;
                 default:
                     System.out.println("Numero no esta entre 1 y 4, Saliendo...");
-                    opcion = 5;
+                    opcion = 6;
                     break;
             }
             
-        } while (opcion != 5);
+        } while (opcion != 6);
         
     }
     
@@ -81,7 +91,6 @@ public class EjercicioPractica3_EncontrarVehiculoMasBarato {
     
     public static void mostrarVehiculos(Vehiculo[] arrayVehiculos) {
         System.out.println(Arrays.toString(arrayVehiculos));
-        
         System.out.println("");
     }
     
@@ -96,7 +105,25 @@ public class EjercicioPractica3_EncontrarVehiculoMasBarato {
             }
             
         }
-        System.out.println("El vehiculo mas barato es: " + vehiculoAux);
+        
+//        System.out.println("El vehiculo mas barato es: " + vehiculoAux);
+        System.out.println(vehiculoAux.getPrecio()); 
+    }
+    
+    public static void eliminarVehiculoPorModelo(String modeloAEliminar, Vehiculo [] arrayVehiculos) {
+        
+        for (int i = 0; i < arrayVehiculos.length; i++) {
+            
+            if(modeloAEliminar.equalsIgnoreCase(arrayVehiculos[i].getModelo())){
+                System.out.println("Modelo eliminado " + arrayVehiculos[i]);
+                arrayVehiculos[i] = null;
+                
+                
+            }
+            
+        }
+        
+        
     }
     
     

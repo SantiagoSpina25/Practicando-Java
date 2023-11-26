@@ -29,10 +29,11 @@ public class EjercicioPractica2_MatricesBasico {
         char [] [] matriz = new char [10] [10];
         
         //Rellenamos matriz
-        rellenarMatriz(matriz, 'X');
+        rellenarMatriz(matriz, 'x');
         
 //        //Mostramos matriz
-//        mostrarMatriz(matriz);
+        mostrarMatriz(matriz);
+        System.out.println("");
         
         //Rellenamos con los huecos
         rellenarVaciosMatriz(matriz);
@@ -45,7 +46,7 @@ public class EjercicioPractica2_MatricesBasico {
         
         for (int fila = 0; fila < matriz.length; fila++) {
         
-            for (int columna = 0; columna < 10; columna++) {
+            for (int columna = 0; columna < matriz.length; columna++) {
                  matriz[fila][columna] = c;
             }
             
@@ -69,23 +70,24 @@ public class EjercicioPractica2_MatricesBasico {
         
         
         // Version sin metodos
+        
 //        //Filas
-//        for (int i = 2; i < 8; i++) {
-//            matriz[2][i] = ' ';
-//        }
-//        
-//        for (int i = 2; i < 8; i++) {
-//            matriz[7][i] = ' ';
-//        }
-//        
-//        //Columnas
-//        for (int i = 2; i < 8; i++) {
-//            matriz[i][2] = ' ';
-//        }
-//        
-//        for (int i = 2; i < 8; i++) {
-//            matriz[i][7] = ' ';
-//        }
+        for (int i = 2; i < 8; i++) {
+            matriz[2][i] = ' ';
+        }
+        
+        for (int i = 2; i < 8; i++) {
+            matriz[7][i] = ' ';
+        }
+        
+        //Columnas
+        for (int i = 2; i < 8; i++) {
+            matriz[i][2] = ' ';
+        }
+        
+        for (int i = 2; i < 8; i++) {
+            matriz[i][7] = ' ';
+        }
 
     }
     
